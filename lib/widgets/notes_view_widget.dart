@@ -15,6 +15,7 @@ class NotesViewWidget extends StatelessWidget {
             height: 50,
           ),
           AppBarWidget(),
+          
           NotesListView()
         ],
       ),
