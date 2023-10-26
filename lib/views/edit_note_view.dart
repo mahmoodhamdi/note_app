@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/widgets/app_bar_widget.dart';
 import 'package:note_app/widgets/custom_button.dart';
 import 'package:note_app/widgets/custom_text_field.dart';
 
-class AddNoteBottomSheet extends StatelessWidget {
-  const AddNoteBottomSheet({super.key});
+class EditNoteView extends StatelessWidget {
+  const EditNoteView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: SingleChildScrollView(
+    return const Scaffold(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
             SizedBox(
+              height: 50,
+            ),
+            AppBarWidget(
+              icon: Icons.check,
+              title: "Edit Notes",
+            ),  SizedBox(
               height: 32,
             ),
-            CustomTextField(
-              label: "title",
-            ),
+            CustomTextField(label: "title"),
             SizedBox(
               height: 16,
             ),
@@ -26,14 +31,9 @@ class AddNoteBottomSheet extends StatelessWidget {
               maxLines: 6,
             ),
             SizedBox(
-              height: 64,
+              height: 32,
             ),
-            CustomButton(
-              title: "Add",
-            ),
-            SizedBox(
-              height: 24,
-            ),
+            CustomButton(title: "Edit"),
           ],
         ),
       ),
