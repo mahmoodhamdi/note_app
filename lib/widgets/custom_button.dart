@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/constants/colors.dart';
+import 'package:note_app/constants/constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.title});
@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(16)),
-          color: Colorss.kPrimaryColor),
+          color: kPrimaryColor),
       child: Center(
           child: Text(
         title,
