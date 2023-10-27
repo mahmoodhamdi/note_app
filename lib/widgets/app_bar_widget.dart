@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:note_app/widgets/search_icon_widget.dart';
 
 class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({super.key, required this.icon, required this.title});
+  const AppBarWidget(
+      {super.key, required this.icon, required this.title, this.onPressed});
   final IconData icon;
   final String title;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,6 +19,7 @@ class AppBarWidget extends StatelessWidget {
         ),
         const Spacer(),
         AppBarIconWidget(
+          onPressed: onPressed,
           icon: icon,
         ),
       ],

@@ -7,7 +7,6 @@ import 'package:note_app/widgets/note_item.dart';
 
 class NotesListView extends StatelessWidget {
   const NotesListView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -28,7 +27,9 @@ class NotesListView extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return const EditNoteView();
+                            return EditNoteView(
+                              noteModel: notes[index],
+                            );
                           },
                         ));
                       },
