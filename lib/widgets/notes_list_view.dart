@@ -32,7 +32,7 @@ class NotesListView extends StatelessWidget {
                           },
                         ));
                       },
-                      child: const NotesItem(),
+                      child: NotesItem(noteModel: notes[index]),
                     ));
               },
             ),
