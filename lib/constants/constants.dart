@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 const Color kPrimaryColor = Color(0xff62FCD7);
 const kNotesBox = "notes_box";
 List<Color> kColorList = [
-  const Color(0xFF98FB98), // Pale Green
   const Color(0xFF87CEEB), // Sky Blue
   const Color(0xFFF0E68C), // Khaki
   const Color(0xFFF5DEB3), // Wheat

@@ -35,7 +35,6 @@ class _EditColorsListViewState extends State<EditColorsListView> {
                 onTap: () {
                   currentIndex = index;
                   widget.noteModel.color = kColorList[index].value;
-
                   setState(() {});
                 },
                 child: ColorItem(

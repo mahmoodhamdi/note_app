@@ -23,6 +23,7 @@ class _EditNoteViewState extends State<EditNoteView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -36,6 +37,7 @@ class _EditNoteViewState extends State<EditNoteView> {
                 widget.noteModel.title = title ?? widget.noteModel.title;
                 widget.noteModel.subTitle =
                     content ?? widget.noteModel.subTitle;
+
                 widget.noteModel.save();
                 Navigator.push(
                     context,
