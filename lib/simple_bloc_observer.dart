@@ -24,11 +24,11 @@ class SimpleBlocObserver implements BlocObserver {
 
   @override
   void onEvent(Bloc bloc, Object? event) {
-    // TODO: implement onEvent
+    debugPrint("onEvent = $bloc   error = $event");
   }
 
   @override
   void onTransition(Bloc bloc, Transition transition) {
-    // TODO: implement onTransition
+    debugPrint("onTransition = $bloc   transition = $transition");
   }
 }
