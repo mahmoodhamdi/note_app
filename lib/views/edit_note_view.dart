@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/notes_view.dart';
 import 'package:note_app/widgets/app_bar_widget.dart';
-import 'package:note_app/widgets/colors_list_view.dart';
 import 'package:note_app/widgets/custom_button.dart';
 import 'package:note_app/widgets/custom_text_form_field.dart';
+import 'package:note_app/widgets/edit_colors_list_view.dart';
 
 class EditNoteView extends StatefulWidget {
   const EditNoteView({
@@ -19,6 +19,7 @@ class EditNoteView extends StatefulWidget {
 
 class _EditNoteViewState extends State<EditNoteView> {
   String? title, content;
+  int? color;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +32,7 @@ class _EditNoteViewState extends State<EditNoteView> {
             ),
             AppBarWidget(
               onPressed: () {
+                widget.noteModel.color = color ?? widget.noteModel.color;
                 widget.noteModel.title = title ?? widget.noteModel.title;
                 widget.noteModel.subTitle =
                     content ?? widget.noteModel.subTitle;
@@ -63,7 +65,8 @@ class _EditNoteViewState extends State<EditNoteView> {
               hint: widget.noteModel.subTitle,
               maxLines: 6,
             ),
-            const ColorsListView(
+            EditColorsListView(
+              noteModel: widget.noteModel,
               isActive: false,
             ),
             const SizedBox(
@@ -72,6 +75,7 @@ class _EditNoteViewState extends State<EditNoteView> {
             CustomButton(
               title: "Edit",
               onTap: () {
+                // widget.noteModel.color = color ?? widget.noteModel.color;
                 widget.noteModel.title = title ?? widget.noteModel.title;
                 widget.noteModel.subTitle =
                     content ?? widget.noteModel.subTitle;
