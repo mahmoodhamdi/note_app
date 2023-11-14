@@ -36,7 +36,7 @@ The Note App allows you to create, edit, and organize your notes efficiently. Ut
 
 
 
-![Note App Screenshot 3](assets/images/edit_note.jpg)
+![Note App Screenshot 3](assets/images/edit_view.jpg)
 
 
 
